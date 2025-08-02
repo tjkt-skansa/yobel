@@ -584,8 +584,50 @@ strong {
 }
 
 .about-image {
-  border-radius: var(--border-radius-medium);
+  width: 340px;         /* ukuran besar untuk desktop */
+  height: 340px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  border: 5px solid rgba(153, 41, 234, 0.65);
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(153, 41, 234, 0.35);
 }
+
+.purple-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 630px;         /* mengikuti ukuran foto */
+  height: 630px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.85;
+}
+
+@media (max-width: 992px) {
+  .about-image {
+    width: 280px;
+    height: 280px;
+  }
+  .purple-blob {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    width: 230px;
+    height: 230px;
+  }
+  .purple-blob {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 
 .about-thumb {
   padding-right: 20px;
